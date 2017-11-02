@@ -17,4 +17,3 @@ if(isset($_GET["action"]) && $_GET["action"] == 'listResources'){
 }else{
     ResourceController::getInstance()->home();
 }
-
