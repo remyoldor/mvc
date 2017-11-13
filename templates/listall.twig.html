@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parcial</title>
+	<style media="screen">
+		th{
+			width: 200px
+		}
+	</style>
+</head>
+<body>
+	<h2> Listado de Votos </h2>
+	<div>
+		<table>
+			<tbody>
+				<tr>
+					<th>Agrupaciones politicas</th>
+					<th>Senadores nacionales</th>
+					<th>Diputados nacionales</th>
+					<th>Diputados provinciales</th>
+					<th>Consejales</th>
+				</tr>
+				{% for v in votos %}
+					<tr>
+						<!-- Probando si imprime -->
+						<td>{{  v.getId()|e }}</td>
+						<td>{{  v.getSeccion()|e }}</td>
+						<td>{{  v.getCircuito()|e }}</td>
+						<td>{{ 	v.getMesa() }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
